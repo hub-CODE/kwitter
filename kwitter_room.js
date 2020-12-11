@@ -1,18 +1,18 @@
 var firebaseConfig = {
-      apiKey: "AIzaSyAvwbzy6-ddY3tFxD7Avb5VH6SrjlSq_Dg",
-      authDomain: "lets-chat-web-app-cd2ff.firebaseapp.com",
-      databaseURL:"https://lets-chat-web-app-cd2ff-default-rtdb.firebaseio.com/",
-      projectId: "lets-chat-web-app-cd2ff",
-      storageBucket: "lets-chat-web-app-cd2ff.appspot.com",
-      messagingSenderId: "459549928233",
-      appId: "1:459549928233:web:acd0d35500f3d915a76538",
-      measurementId: "G-PDRH10VD8L"
+      apiKey: "AIzaSyCkAaO12T3cDFFTDDtHDCTCzpG5uHrZKzI",
+      authDomain: "kwitter-250e5.firebaseapp.com",
+      databaseURL:"https://kwitter-250e5-default-rtdb.firebaseio.com/",
+      projectId: "kwitter-250e5",
+      storageBucket: "kwitter-250e5.appspot.com",
+      messagingSenderId: "1065699304015",
+      appId: "1:1065699304015:web:6f890ca561e3e54b20c03a",
+      measurementId: "G-3PVZS5RBY4"
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 //ADD YOUR FIREBASE LINKS HERE
 
-username=document.getElementById("username").innerHTML="Hi"+username+"!";
+username=document.getElementById("username").innerHTML="Welcome"+username+"!";
 function addroom() {
       roomname=document.getElementById("room_name").value
       firebase.database().ref("/").child(roomname).update({
@@ -34,7 +34,7 @@ console.log("roomname:"+Room_names);
 row="<div class='room_name' id="+Room_names+" onclick='redirectToRoomName(this.id)'># "+Room_names+"</div><hr>";
 document.getElementById("output").innerHTML+=row;
       });});}
-      getData();
+getData();
 
 function redirectToRoomName(name){
       console.log(name);
